@@ -1,16 +1,17 @@
 import React from "react";
 import { StyleSheet, View, StatusBar } from "react-native";
-import { windowWidth, COLORS } from "../../utils/util";
-import ImageViewer from "../../components/ImageViewer";
-import Button from "../../components/Button";
+import { windowWidth, COLORS } from "../utils/util";
+import ImageViewer from "../components/ImageViewer";
+import Button from "../components/Button";
 import { LinearGradient } from "expo-linear-gradient";
 
-const PlaceholderImage = require("../../../assets/images/character.png");
+const PlaceholderImage = require("../assets/images/character.png");
 
-const HomeScreen = () => {
-  const test = () => {
-    console.log('press button');
-  }
+const StartScreen = ({ navigation }) => {
+  const goToLoginScreen = () => navigation.navigate("Login");
+
+  const goToSignupScreen = () => navigation.navigate("Login");
+
   return (
     <View style={styles.container}>
       <LinearGradient
@@ -28,8 +29,8 @@ const HomeScreen = () => {
         />
       </View>
       <View style={styles.footerContainer}>
-        <Button label="Iniciar sesión" theme={"primary"} fn={test} />
-        <Button label="Registrarse" fn={test} />
+        <Button label="Iniciar sesión" theme={"primary"} fn={goToLoginScreen} />
+        <Button label="Registrarse" fn={goToSignupScreen} />
       </View>
       <StatusBar style="auto" />
     </View>
@@ -62,4 +63,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default StartScreen;
