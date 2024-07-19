@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "##f3f3f3"
-      }
+      },
+      "package": "com.molxno.dev.mentorium"
     },
     "web": {
       "bundler": "metro",
