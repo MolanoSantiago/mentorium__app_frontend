@@ -41,6 +41,12 @@
         "projectId": "4b21b36c-599b-4069-bf0a-dc524e0b4e4c"
       }
     },
-    "owner": "molxno.dev"
+    "owner": "molxno.dev",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/4b21b36c-599b-4069-bf0a-dc524e0b4e4c"
+    }
   }
 }
