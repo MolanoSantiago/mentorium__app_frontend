@@ -1,12 +1,11 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 
 import {useSession} from '@/context/auth';
-import TabLayout from "@/app/(app)/(tabs)/_layout";
 
 export default function Index() {
     const {signOut} = useSession();
     return (
-        <View style={styles.container}>
+        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
             <Text
                 onPress={() => {
                     // The `app/(app)/_layout.tsx` will redirect to the sign-in screen.
@@ -17,11 +16,3 @@ export default function Index() {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center"
-    }
-})
